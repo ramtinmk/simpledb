@@ -1,0 +1,78 @@
+# ----------------------------------------------------
+# 1. Build & Output Directories
+# ----------------------------------------------------
+# The standard build directory
+build/
+build-*/
+
+# Specific output directories defined in your CMakeLists
+# (In case you change them to be outside the build folder)
+bin/
+lib/
+
+# CMake generated artifacts (if you accidentally run cmake in the root)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+CMakeUserPresets.json
+install_manifest.txt
+*.cmake
+
+# ----------------------------------------------------
+# 2. C++ Compiled Files
+# ----------------------------------------------------
+# Object files
+*.o
+*.obj
+
+# Static and Dynamic Libraries
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables (in case they end up in root)
+*.exe
+*.out
+*.app
+
+# ----------------------------------------------------
+# 3. IDE & Editor Configuration
+# ----------------------------------------------------
+# VS Code
+.vscode/
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj
+*.sln
+
+# Mac OS junk
+.DS_Store
+
+# Vim / Emacs swap files
+*.swp
+*~
+
+# ----------------------------------------------------
+# 4. SimpleDB Specific (Data & Logs)
+# ----------------------------------------------------
+# Since this is a database, ignore the actual data files
+# produced by the program so you don't commit your test data.
+*.db
+*.dat
+*.log
+*.pwal
+
+# If you store data in a specific folder
+data/
+logs/
