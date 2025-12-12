@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Row.h"
+#include "input_buffer.h"
 
 using namespace std;
 
@@ -8,6 +9,12 @@ using namespace std;
 int main(){
 
     cout << "Starting to test SimpleDB..." << endl;
+
+    InputBuffer inp;
+
+    std::string input_string = inp.get_buffer();
+
+    std::cout<<input_string<<std::endl;
 
     std::vector<int> ints = {1,2,3,4,5};
 

@@ -50,6 +50,7 @@ add_executable(simpledb
     ${PROJECT_SOURCE_DIR}/src/main.cpp
 )
 
+
 target_link_libraries(simpledb PRIVATE simpledb_core)
 
 # ----------------------------

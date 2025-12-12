@@ -1,7 +1,6 @@
 #include <iostream>
 
 
-using namespace std;
 
 
 
@@ -9,5 +8,5 @@ using namespace std;
 
 int main() {
 
-    cout<< "Welcome to SimpleDB :)"<< endl;
+    std::cout<< "Welcome to SimpleDB :)"<< std::endl;
 }
