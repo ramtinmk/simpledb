@@ -1,3 +1,7 @@
+
+#ifndef ROW_H
+#define ROW_H
+
 #include <cstdint>
 #include <vector>
 #include <cstring>
@@ -83,7 +87,7 @@ class Row{
 
         void print(){
 
-            for (int i=0;i<values.size();i++)
+            for (size_t i=0;i<values.size();i++)
             {
                 switch ((get_column(i)).getType()) {
                 case DataType::INT:
@@ -103,3 +107,6 @@ class Row{
         }
 
 };
+
+
+#endif

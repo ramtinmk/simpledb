@@ -1,3 +1,6 @@
+#ifndef TABLE_H
+#define TABLE_H
+
 #include "Row.h"
 
 
@@ -39,4 +42,7 @@ class Table{
         void flush_to_disk();
 
         void open_db_files();
-}
+};
+
+
+#endif
