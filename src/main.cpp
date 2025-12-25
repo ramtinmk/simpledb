@@ -16,7 +16,11 @@ int main() {
         std::cout <<"write your query: ";
         std::string query = str.get_buffer();
 
-        build_statement(query);
+        Statement state = build_statement(query);
+
+
+        state.row_to_insert.print();
+
         std::cout<<"your query: "<< query<<std::endl;
     }
 }

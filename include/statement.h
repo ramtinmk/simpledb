@@ -75,9 +75,36 @@ Statement& build_statement(std::string& query){
         }
     }
 
+    Statement* statement = new Statement();
+
     if (parts[0] == "insert"){
 
-        std::cout<<"hello"<< parts[1]<<parts[2]<<std::endl;
+        std::vector<std::string> columns;
+
+        size_t length = split(parts[1],columns,',');
+
+        statement->type = StatementType::INSERT;
+
+        for (size_t i=0;i<columns.size();i++)
+        {
+            // Check if integer
+            if (std::all_of(columns[i].begin(), columns[i].end(), ::isdigit)){
+                int value = std::stoi(columns[i]);
+                DataField data(value);
+                statement->row_to_insert.add_column(data);
+            }
+            else{
+                // It's a string
+                // Remove quotes if present
+                if (columns[i].front() == '\'' && columns[i].back() == '\''){
+                    columns[i] = columns[i].substr(1, columns[i].size() - 2);
+                }
+                DataField data(columns[i]);
+                statement->row_to_insert.add_column(data);
+            }
+        }
+
+        return *statement;
     }
 
 }
